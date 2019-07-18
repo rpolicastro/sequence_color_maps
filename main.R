@@ -52,5 +52,5 @@ p <- ggplot(cleaned.data, aes(x=position, y=sequence)) +
 	)
 
 ggsave("sequence-colormap.pdf", plot=p, device="pdf", width=5, height=5)
-ggsave("sequence-colormap.png", plot=p, device="png", width=5, height=5, dpi=300)
+ggsave("sequence-colormap.png", plot=p, device="png", width=5, height=5)
 
