@@ -9,7 +9,7 @@ This repository houses the software needed to make sequence color maps.
 To get started, you must first clone the Sequence Color Map repository. 
 Navigate to a directory you would like to clone the repo to and enter
 ```
-https://github.com/rpolicastro/sequence_color_maps.git
+git clone https://github.com/rpolicastro/sequence_color_maps.git
 ```
 
 ### Installing Singularity
