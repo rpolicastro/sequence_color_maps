@@ -1,0 +1,32 @@
+
+bootstrap: docker
+From: continuumio/miniconda3
+
+%post
+
+## Add conda to path
+export PATH=$PATH:/opt/conda/bin
+
+## Update conda
+conda update -n base -y -c defaults conda
+
+## Install sequence color map analysis software
+conda create -n sequence-colormap -y -c conda-forge -c bioconda \
+bioconductor-genomicranges \
+bioconductor-genomicfeatures \
+bioconductor-biostrings \
+bioconductor-rtracklayer \
+bioconductor-rsamtools \
+r-tidyverse
+
+## Update rnaseq-automation environment
+conda update -n sequence-colormap -y -c conda-forge -c bioconda --all
+
+## Clean up extra files
+conda clean -y --all
+
+%environment
+
+## Add software to environment
+
+export PATH=/opt/conda/envs/sequence-colormap/bin:$PATH
