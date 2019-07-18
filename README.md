@@ -20,7 +20,7 @@ Please refer to the [documentation](https://www.sylabs.io/docs/) on their websit
 
 ### Specifying Run Settings
 
-The last step is to set a few settings in the 'settings' file in the main repository directory.
+The last step is to set a few settings in the 'settings.conf' file in the main repository directory.
 
 | Setting | Description |
 | ------- | ----------- |

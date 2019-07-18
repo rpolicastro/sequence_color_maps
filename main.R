@@ -12,7 +12,7 @@ library("tidyverse")
 
 ## Load settings.
 
-source("settings")
+source("settings.conf")
 
 ## Read in Fasta file.
 
