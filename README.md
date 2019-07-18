@@ -2,6 +2,8 @@
 
 This repository houses the software needed to make sequence color maps.
 
+![screenshot](https://raw.githubusercontent.com/rpolicastro/sequence_color_maps/master/docs/sequence-colormap.png)
+
 ## Getting Started
 
 ### Cloning Repository
