@@ -19,6 +19,7 @@ fi
 ## Run Script
 ## ----------
 
-singularity exec -eC \
+singularity exec \
+-e -C -B $PWD -H $PWD \
 "singularity/${CONTAINER_NAME}" \
-main.R
+Rscript main.R
