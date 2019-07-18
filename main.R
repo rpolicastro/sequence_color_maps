@@ -30,7 +30,7 @@ cleaned.data <- FASTA %>%
 	setNames(rev(1:seq.length)) %>%
 	rowid_to_column(var="sequence") %>%
 	gather(key="position", value="base", -sequence) %>%
-	mutate(position=factor(position, levels=1:seq.length))
+	mutate(position=as.integer(position))
 
 ## Plotting Data
 ## ----------
@@ -41,9 +41,9 @@ p <- ggplot(cleaned.data, aes(x=position, y=sequence)) +
 	theme_minimal() +
 	theme(
 		axis.title.y=element_blank(),
-		axis.text=element_blank(),
+		axis.text.y=element_blank(),
 		legend.title=element_blank(),
-		text=element_text(size=16),
+		axis.title.x=element_text(size=16),
 		panel.grid=element_blank()
 	)
 
