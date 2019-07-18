@@ -47,6 +47,6 @@ p <- ggplot(cleaned.data, aes(x=position, y=sequence)) +
 		panel.grid=element_blank()
 	)
 
-pdf("sequence-colormap.pdf")
-print(p)
-dev.off()
+ggsave("sequence-colormap.pdf", plot=p, device="pdf", width=5, height=5)
+ggsave("sequence-colormap.png", plot=p, device="png", width=5, height=5, dpi=300)
+
