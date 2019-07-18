@@ -10,9 +10,13 @@ library("tidyverse")
 ## Prepare Data
 ## ----------
 
+## Load settings.
+
+source("settings")
+
 ## Read in Fasta file.
 
-FASTA <- readDNAStringSet("example/motif_matches.fasta", format="fasta")
+FASTA <- readDNAStringSet(fasta.file, format="fasta")
 
 ## Get sequence length.
 
