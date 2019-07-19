@@ -6,6 +6,12 @@ This repository houses the software needed to make sequence color maps.
 
 ## Getting Started
 
+### Preparing Input
+
+This workflow takes a fasta file as input. 
+The sequence colormap order will follow the order of sequences in the fasta file. 
+The sequences in the fasta file should all be of equal length.
+
 ### Cloning Repository
 
 To get started, you must first clone the Sequence Color Map repository. 
