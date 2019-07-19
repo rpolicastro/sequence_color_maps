@@ -33,6 +33,7 @@ cleaned.data <- FASTA %>%
 	as_tibble %>%
 	setNames(1:seq.length) %>%
 	rowid_to_column(var="sequence") %>%
+	mutate(sequence=rev(sequence)) %>%
 	gather(key="Position", value="base", -sequence) %>%
 	mutate(Position=as.integer(Position))
 
