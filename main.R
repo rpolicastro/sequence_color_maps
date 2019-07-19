@@ -33,13 +33,13 @@ cleaned.data <- FASTA %>%
 	as_tibble %>%
 	setNames(rev(1:seq.length)) %>%
 	rowid_to_column(var="sequence") %>%
-	gather(key="position", value="base", -sequence) %>%
-	mutate(position=as.integer(position))
+	gather(key="Position", value="base", -sequence) %>%
+	mutate(Position=as.integer(Position))
 
 ## Plotting Data
 ## ----------
 
-p <- ggplot(cleaned.data, aes(x=position, y=sequence)) +
+p <- ggplot(cleaned.data, aes(x=Position, y=sequence)) +
 	geom_tile(aes(fill=base)) +
 	scale_fill_viridis_d() +
 	theme_minimal() +
@@ -47,10 +47,8 @@ p <- ggplot(cleaned.data, aes(x=position, y=sequence)) +
 		axis.title.y=element_blank(),
 		axis.text.y=element_blank(),
 		legend.title=element_blank(),
-		axis.title.x=element_text(size=16),
+		axis.title.x=element_text(size=16, margin=margin(t=15)),
 		panel.grid=element_blank()
 	)
 
 ggsave("sequence-colormap.pdf", plot=p, device="pdf", width=5, height=5)
-ggsave("sequence-colormap.png", plot=p, device="png", width=5, height=5)
-
