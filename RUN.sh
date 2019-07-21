@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONTAINER="library://rpolicastro/default/sequence_colormaps:1.0.0"
+CONTAINER="library://rpolicastro/default/sequence_colormaps:1.0.1"
 
 ###############################
 ## Generate Sequence Colormaps
