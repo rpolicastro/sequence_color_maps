@@ -13,11 +13,9 @@ conda update -n base -y -c defaults conda
 ## Install sequence color map analysis software
 conda create -n sequence-colormap -y -c conda-forge -c bioconda \
 bioconductor-genomicranges \
-bioconductor-genomicfeatures \
 bioconductor-biostrings \
-bioconductor-rtracklayer \
-bioconductor-rsamtools \
-r-tidyverse
+r-tidyverse \
+r-ggseqlogo
 
 ## Update rnaseq-automation environment
 conda update -n sequence-colormap -y -c conda-forge -c bioconda --all
