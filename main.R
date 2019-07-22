@@ -79,8 +79,9 @@ viridis.bases <- make_col_scheme(
 
 p <- ggplot() +
 	geom_logo(PFM, col_scheme=viridis.bases) +
-	theme_logo()
+	theme_logo() +
+	theme(axis.text.x=element_text(size=3))
 
-ggsave("sequence-logo.pdf", plot=p, device="png", width=5, height=1.5)
+ggsave("sequence-logo.pdf", plot=p, device="pdf", width=5, height=1.5)
 
 
